@@ -19,7 +19,6 @@ type User struct {
 	Level    int
 }
 
-
 type IpoBalance struct {
 	ID               int             `gorm:"column:id;primary_key;auto_increment;not null"`
 	S_INFO_WINDCODE  string          `gorm:"column:S_INFO_WINDCODE;unique_index:S_R"`     //Wind代码
@@ -47,6 +46,7 @@ type D struct {
 
 func main() {
 	//连接数据库
+
 	db, err := gorm.Open("mysql", "root:123@tcp(localhost:3306)/test?charset=utf8&parseTime=true")
 	//一个坑，不设置这个参数，gorm会把表名转义后加个s，导致找不到数据库的表
 	db.SingularTable(true)
