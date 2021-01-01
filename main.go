@@ -19,6 +19,7 @@ type User struct {
 	Level    int
 }
 
+
 type IpoBalance struct {
 	ID               int             `gorm:"column:id;primary_key;auto_increment;not null"`
 	S_INFO_WINDCODE  string          `gorm:"column:S_INFO_WINDCODE;unique_index:S_R"`     //Wind代码
